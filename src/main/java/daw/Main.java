@@ -147,7 +147,7 @@ public class Main {
                             JOptionPane.showMessageDialog(null, situacion3);
                             int numAleatorio = Juego.sobrevive();
                             int oportunidad = 0;
-
+                            
                             for (int i = 0; i < 3; i++) {
 
                                 try {
@@ -163,12 +163,17 @@ public class Main {
 
                                     JOptionPane.showMessageDialog(null, "Enhorabuena, has escapado");
                                     break;
+                                    
                                 }
+                                
+                                
 
                             }
+                            
                             JOptionPane.showMessageDialog(null,
                                     "Has perdido las 3 vidas, Lobato ha vendido tu coche y has aparecido en la entrada");
                             salir = true;
+                            
                         }
 
                         case 2 -> {
