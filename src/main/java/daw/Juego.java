@@ -68,7 +68,7 @@ public class Juego {
     public static int sobrevive(){
         Random numRandom = new Random();
 
-        int numAleatorio = numRandom.nextInt(2)+1;
+        int numAleatorio = numRandom.nextInt(20)+1;
         return numAleatorio;
 
     }

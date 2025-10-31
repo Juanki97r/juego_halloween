@@ -60,29 +60,41 @@ public class Main {
                             JOptionPane.showMessageDialog(null, situacion1);
                             int numAleatorio = Juego.sobrevive();
                             int oportunidad = 0;
-
+                            boolean controlExcepciones;
+                            int contadorVidas;
+                            do{
+                                contadorVidas = 3;
+                                controlExcepciones = false; //reseteamos en caso de repeticion si luego se hace bien para que no
+                                                            //quede en true
+                            try {
                             for (int i = 0; i < 3; i++) {
 
-                                try {
+                                
                                     do {
 
                                         oportunidad = Integer.parseInt(
                                                 JOptionPane.showInputDialog("Adivina el número entre 1 y 20"));
                                     } while (oportunidad < 1 || oportunidad > 20);
-                                } catch (NumberFormatException nfe) {
-                                    JOptionPane.showMessageDialog(null, "Has introducido mal el número");
-                                }
+                                
                                 if (numAleatorio == oportunidad) {
 
                                     JOptionPane.showMessageDialog(null, "Enhorabuena, has escapado");
                                     break;
+                                } else{
+                                    contadorVidas--;
                                 }
 
-                            }
+                            } 
+                            } catch (NumberFormatException nfe) {
+                                    JOptionPane.showMessageDialog(null, "Has introducido mal el número");
+                                    controlExcepciones = true;
+                                } 
+                            }while(controlExcepciones);
+                            if(contadorVidas==0){
                             JOptionPane.showMessageDialog(null,
                                     "Has perdido las 3 vidas, Doraemon te ha mandado de vuelta a la entrada");
                             salir = true;
-
+                            }
                         }
                         case 2 -> {
                             JOptionPane.showMessageDialog(null, "Has abierto la puerta del pasillo...");
@@ -94,30 +106,44 @@ public class Main {
                             }
 
                             JOptionPane.showMessageDialog(null, situacion2);
-                            int numAleatorio = Juego.sobrevive();
+                           int numAleatorio = Juego.sobrevive();
                             int oportunidad = 0;
-
+                            boolean controlExcepciones;
+                            int contadorVidas;
+                            do{
+                                contadorVidas = 3; //reseteo
+                                controlExcepciones = false; //reseteamos en caso de repeticion si luego se hace bien para que no
+                                                            //quede en true
+                            try {
                             for (int i = 0; i < 3; i++) {
 
-                                try {
+                                
                                     do {
 
                                         oportunidad = Integer.parseInt(
                                                 JOptionPane.showInputDialog("Adivina el número entre 1 y 20"));
                                     } while (oportunidad < 1 || oportunidad > 20);
-                                } catch (NumberFormatException nfe) {
-                                    JOptionPane.showMessageDialog(null, "Has introducido mal el número");
-                                }
+                                
                                 if (numAleatorio == oportunidad) {
 
                                     JOptionPane.showMessageDialog(null, "Enhorabuena, has escapado");
                                     break;
+                                } else{
+                                    contadorVidas--;
                                 }
 
-                            }
+                            } 
+                            } catch (NumberFormatException nfe) {
+                                    JOptionPane.showMessageDialog(null, "Has introducido mal el número");
+                                    controlExcepciones = true;
+                                } 
+                            }while(controlExcepciones);
+                            if(contadorVidas==0){
                             JOptionPane.showMessageDialog(null,
                                     "Has perdido las 3 vidas, Vico te ha suspendido y has aparecido en la entrada");
                             salir = true;
+                            }
+                            
                         }
                     }
                 }
@@ -147,32 +173,42 @@ public class Main {
                             JOptionPane.showMessageDialog(null, situacion3);
                             int numAleatorio = Juego.sobrevive();
                             int oportunidad = 0;
-                            
+                            boolean controlExcepciones;
+                            int contadorVidas;
+                            do{
+                                contadorVidas =3;
+                                controlExcepciones = false; //reseteamos en caso de repeticion si luego se hace bien para que no
+                                                            //quede en true
+                            try {
                             for (int i = 0; i < 3; i++) {
 
-                                try {
+                                
                                     do {
 
                                         oportunidad = Integer.parseInt(
                                                 JOptionPane.showInputDialog("Adivina el número entre 1 y 20"));
                                     } while (oportunidad < 1 || oportunidad > 20);
-                                } catch (NumberFormatException nfe) {
-                                    JOptionPane.showMessageDialog(null, "Has introducido mal el número");
-                                }
+                                
                                 if (numAleatorio == oportunidad) {
 
                                     JOptionPane.showMessageDialog(null, "Enhorabuena, has escapado");
                                     break;
-                                    
+                                } else{
+                                    contadorVidas--;
                                 }
-                                
-                                
 
+                            } 
+                            } catch (NumberFormatException nfe) {
+                                    JOptionPane.showMessageDialog(null, "Has introducido mal el número");
+                                    controlExcepciones = true;
+                                } 
+                            }while(controlExcepciones);
+                            if(contadorVidas==0){
+                            JOptionPane.showMessageDialog(null,
+                                    "Has perdido las 3 vidas, Lobato ha vendido tu coche y has reaparecido en la entrada");
+                            salir = true;
                             }
                             
-                            JOptionPane.showMessageDialog(null,
-                                    "Has perdido las 3 vidas, Lobato ha vendido tu coche y has aparecido en la entrada");
-                            salir = true;
                             
                         }
 
@@ -188,28 +224,41 @@ public class Main {
                             JOptionPane.showMessageDialog(null, situacion4);
                             int numAleatorio = Juego.sobrevive();
                             int oportunidad = 0;
-
+                            boolean controlExcepciones;
+                            int contadorVidas;
+                            do{
+                                contadorVidas = 3;
+                                controlExcepciones = false; //reseteamos en caso de repeticion si luego se hace bien para que no
+                                                            //quede en true
+                            try {
                             for (int i = 0; i < 3; i++) {
 
-                                try {
+                                
                                     do {
 
                                         oportunidad = Integer.parseInt(
                                                 JOptionPane.showInputDialog("Adivina el número entre 1 y 20"));
                                     } while (oportunidad < 1 || oportunidad > 20);
-                                } catch (NumberFormatException nfe) {
-                                    JOptionPane.showMessageDialog(null, "Has introducido mal el número");
-                                }
+                                
                                 if (numAleatorio == oportunidad) {
 
                                     JOptionPane.showMessageDialog(null, "Enhorabuena, has escapado");
                                     break;
+                                } else{
+                                    contadorVidas--;
                                 }
 
-                            }
+                            } 
+                            } catch (NumberFormatException nfe) {
+                                    JOptionPane.showMessageDialog(null, "Has introducido mal el número");
+                                    controlExcepciones = true;
+                                } 
+                            }while(controlExcepciones);
+                            if(contadorVidas==0){
                             JOptionPane.showMessageDialog(null,
-                                    "Has perdido las 3 vidas, El crypto bro se ha quedado con tu dinero y has aparecido en la puerta de nuevo");
+                                    "Has perdido las 3 vidas, el cryptobro se ha quedado con tu dinero y has reaparecido en la entrada");
                             salir = true;
+                            }
 
                         }
                     }
