@@ -25,9 +25,17 @@ public class Main {
                switch (decisionPuerta) {
                 case 1-> {
                     JOptionPane.showMessageDialog(null, "Has abierto la puerta de la despensa...");
+                    int suerte = Juego.escapaOjuega();
+                    if(suerte <= 50){
+                        JOptionPane.showMessageDialog(null, "Es tu día de suerte, el fantasma esta dormido y has escapado");
+                    }
                 }
                 case 2-> {
                     JOptionPane.showMessageDialog(null, "Has abierto la puerta del pasillo...");
+                    int suerte = Juego.escapaOjuega();
+                    if(suerte <= 50){
+                        JOptionPane.showMessageDialog(null, "Es tu día de suerte, el fantasma esta dormido y has escapado");
+                    }
                 }
                }
             }
@@ -46,10 +54,19 @@ public class Main {
                 switch (decisionPuerta) {
                     case 1 -> {
                         JOptionPane.showMessageDialog(null, "Has entrado en el salon...");
+                        int suerte = Juego.escapaOjuega();
+                    if(suerte <= 50){
+                        JOptionPane.showMessageDialog(null, "Es tu día de suerte, el fantasma esta dormido y has escapado");
+                    }
                     }
 
                     case 2 -> {
                         JOptionPane.showMessageDialog(null, "Has entrado en la biblioteca...");
+                        int suerte = Juego.escapaOjuega();
+                    if(suerte <= 50){
+                        JOptionPane.showMessageDialog(null, "Es tu día de suerte, el fantasma esta dormido y has escapado");
+                    }
+                    
                     }
             }
         }

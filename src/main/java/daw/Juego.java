@@ -55,6 +55,15 @@ public class Juego {
         despensaPasilloInt = despensaPasillo.equalsIgnoreCase("despensa") ? 1:2;
         return despensaPasilloInt;
     }
+
+    public static int escapaOjuega(){
+        Random numrandom = new Random();
+
+        int numAleatorio = numrandom.nextInt(100);
+        return numAleatorio;
+        
+
+    }
 }
 
 
