@@ -23,6 +23,38 @@ public class Juego {
         return puertaVentana; 
 
     }
+
+    public static int decidirRecibidor (){
+        String mensaje = """
+                Estas en el recibidor, ¿quieres abrir
+                la puerta del salon o la de la 
+                biblioteca?
+                """;;
+        String biblioSalon = "";
+        int biblioSalonInt = 0;
+        do{
+            biblioSalon = JOptionPane.showInputDialog(mensaje);
+        }while(!(biblioSalon.equalsIgnoreCase("salon") || biblioSalon.equalsIgnoreCase("biblioteca")));
+
+        biblioSalonInt = biblioSalon.equalsIgnoreCase("salon") ? 1:2;
+        return biblioSalonInt;
+    }
+
+    public static int decidirCocina (){
+        String mensaje = """
+                Estas en la cocina, ¿quieres abrir
+                la puerta de la despensa o la del
+                pasillo?
+                """;;
+        String despensaPasillo = "";
+        int despensaPasilloInt = 0;
+        do{
+            despensaPasillo = JOptionPane.showInputDialog(mensaje);
+        }while(!(despensaPasillo.equalsIgnoreCase("despensa") || despensaPasillo.equalsIgnoreCase("pasillo")));
+
+        despensaPasilloInt = despensaPasillo.equalsIgnoreCase("despensa") ? 1:2;
+        return despensaPasilloInt;
+    }
 }
 
 
